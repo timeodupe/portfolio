@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet INFOWARE SIRH — Portfolio BTS SIO</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="infoware.css" />
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <p class="hero-eyebrow">Projet Binôme BTS SIO SLAM — Avril 2026</p>
+    <h1>Application de <span>Gestion RH</span><br>INFOWARE-SIRH</h1>
+    <p class="hero-sub">Java, NetBeans, JDBC et MariaDB. Reprise d'un prototype d'application bureau incomplet afin de développer de A à Z les fonctionnalités CRUD permettant de gérer les données des salariés.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Contexte Client</span>
+        <span class="meta-value">INFOWARE (Mandat ESN)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Date</span>
+        <span class="meta-value">Avril 2026</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Organisation</span>
+        <span class="meta-value">Projet en Binôme</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Stack principale</span>
+        <span class="meta-value">Java · MariaDB · JDBC</span>
+      </div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="../../index.html" class="btn btn-secondary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Retour au portfolio
+      </a>
+    </div>
+
+  </div>
+  <div class="hero-scroll">
+    <svg viewBox="0 0 24 24" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+    Voir le projet
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="section-label">// contexte</p>
+    <h2 class="section-title">Résumé du projet</h2>
+    <div class="resume-grid">
+      <div class="resume-card full">
+        <h3>La problématique</h3>
+        <p>L'entreprise de distribution de matériel informatique INFOWARE a mandaté notre ESN pour le développement de son nouveau système d'information de ressources humaines (SIRH). Nous devions reprendre un prototype d'application bureau incomplet afin de développer de A à Z les fonctionnalités CRUD (Créer, Lire, Mettre à jour, Supprimer) permettant de gérer les données des salariés, le tout connecté à une base de données existante.</p>
+      </div>
+      <div class="resume-card">
+        <h3>Contexte et démarche</h3>
+        <p>Le projet s'est déroulé en binôme avec une démarche agile, découpée en 10 étapes progressives validées par des tests et des comptes-rendus. Nous avons adopté une architecture logicielle stricte en couches pour séparer l'interface graphique de l'accès aux données. Nous avons utilisé l'IDE NetBeans pour la programmation orientée objet en Java, connecté à un serveur local MariaDB.</p>
+      </div>
+      <div class="resume-card">
+        <h3>Résolution</h3>
+        <p>Après la configuration de la base et du script SQL fourni via connecteur JDBC, nous avons codé les modèles de données (Pattern DAO pour les classes métier <code>Salarie</code>, <code>Categorie</code>, <code>Service</code>). Ensuite, nous avons maqueté les interfaces graphiques, puis lié le tout en gérant les événements (clics, sélections) pour aboutir à une application robuste et fonctionnelle, livrée sous forme d'exécutable autonome.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="section-label">// realisations</p>
+    <h2 class="section-title">Étapes du Projet</h2>
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">⚙️</div>
+        <h3>Étape 0 & 1 : Initialisation</h3>
+        <p>Constitution du binôme et mise en place de l'environnement de travail collaboratif. Installation de MariaDB, exécution du script SQL, et résolution des problèmes de driver JDBC (mysql-connector) pour permettre la connexion.</p>
+        <div class="pdf-links-container">
+          <a href="CR/G8_Dupe_Gilbert_E_1.pdf" target="_blank" class="pdf-link">📄 Compte-rendu Étape 1</a>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📦</div>
+        <h3>Étape 2 : Classes Métier</h3>
+        <p>Codage de la classe métier <code>Categorie</code> et mise à jour de la classe <code>Salarie</code> pour inclure l'association avec les catégories. Validation du code par des classes de tests unitaires pour vérifier l'instanciation correcte.</p>
+        <div class="pdf-links-container">
+          <a href="CR/Dupe_Timeo_Gilbert_Titouan_Etape2.pdf" target="_blank" class="pdf-link">📄 Compte-rendu Étape 2</a>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🖥️</div>
+        <h3>Étape 3 : Maquettage des IHM</h3>
+        <p>Conception graphique sous NetBeans des différentes fenêtres : liste principale, formulaire d'ajout, de modification et de consultation. Choix des composants Java Swing (JTable, JComboBox, JLabel, JTextField) pour l'ergonomie.</p>
+        <div class="pdf-links-container">
+          <a href="CR/Dupe_Timeo_Gilbert_Titouan_E_3.pdf" target="_blank" class="pdf-link">📄 Compte-rendu Étape 3</a>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">💾</div>
+        <h3>Étape 4 : Couche de données (DAO)</h3>
+        <p>Création des classes <code>DaoCategorie</code> et mise à jour de <code>DaoSalarie</code> pour assurer la liaison Java / SQL. Implémentation des méthodes <code>getOneById</code> et <code>getAll</code>, validées par des tests unitaires.</p>
+        <div class="pdf-links-container">
+          <a href="CR/G8_Dupe_Gilbert_E_4.pdf" target="_blank" class="pdf-link">📄 Compte-rendu Étape 4</a>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <h3>Étapes 5 & 6 : Consultation & Filtrage</h3>
+        <p>Développement du filtrage dynamique des salariés par service (Synchronisation JComboBox et JTable). Implémentation de la consultation détaillée d'un salarié sélectionné dans une fenêtre dédiée non modifiable.</p>
+        <div class="pdf-links-container">
+          <a href="CR/Dupe_Timeo_Gilbert_Titouan_Etape5.pdf" target="_blank" class="pdf-link">📄 CR Étape 5</a>
+          <a href="CR/Dupe_Timeo_Gilbert_Titouan_Etape6.pdf" target="_blank" class="pdf-link">📄 CR Étape 6</a>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📝</div>
+        <h3>Étapes 7 & 8 : Ajout & Suppression</h3>
+        <p>Suppression d'un salarié avec confirmation (requêtes en cascade pour clés étrangères). Création du formulaire d'ajout avec récupération automatique des services/catégories et insertion via <code>PreparedStatement</code>.</p>
+        <div class="pdf-links-container">
+          <a href="CR/Dupe_Timeo_Gilbert_Titouan_Etape7.pdf" target="_blank" class="pdf-link">📄 CR Étape 7</a>
+          <a href="CR/Dupe_Timeo_Gilbert_Titouan_Etape8.pdf" target="_blank" class="pdf-link">📄 CR Étape 8</a>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🚀</div>
+        <h3>Étape 10 : Livraison & Doc</h3>
+        <p>Finalisation du projet avec la compilation et la génération de l'archive exécutable (dossier <code>dist</code> avec le <code>.jar</code>). Création de la JavaDoc technique et rédaction du mode opératoire de déploiement.</p>
+        <div class="pdf-links-container">
+          <a href="CR/Dupe_Timeo_Gilbert_Titouan_Etape10.pdf" target="_blank" class="pdf-link">📄 Compte-rendu Étape 10</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="section-label">// stack</p>
+    <h2 class="section-title">Technologies utilisées</h2>
+    <div class="tech-groups">
+
+      <div class="tech-group">
+        <span class="tech-group-label">Langage & Archi</span>
+        <div class="tech-chips">
+          <span class="tech-chip">Java <span class="tc-role">Langage Orienté Objet</span></span>
+          <span class="tech-chip">Architecture en Couches <span class="tc-role">Modèle MVC</span></span>
+          <span class="tech-chip">Pattern DAO <span class="tc-role">Accès aux données</span></span>
+        </div>
+      </div>
+
+      <div class="tech-group">
+        <span class="tech-group-label">Base de données</span>
+        <div class="tech-chips">
+          <span class="tech-chip">MariaDB <span class="tc-role">SGBD local</span></span>
+          <span class="tech-chip">SQL <span class="tc-role">Scripts & requêtes</span></span>
+          <span class="tech-chip">JDBC <span class="tc-role">Connecteur mySQL</span></span>
+          <span class="tech-chip">PreparedStatement <span class="tc-role">Requêtes sécurisées</span></span>
+        </div>
+      </div>
+
+      <div class="tech-group">
+        <span class="tech-group-label">Interface & Outils</span>
+        <div class="tech-chips">
+          <span class="tech-chip">NetBeans <span class="tc-role">IDE de développement</span></span>
+          <span class="tech-chip">Java Swing <span class="tc-role">Composants IHM</span></span>
+          <span class="tech-chip">JavaDoc <span class="tc-role">Génération documentation</span></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="section-label">// référentiel</p>
+    <h2 class="section-title">Compétences développées</h2>
+    <div class="comp-grid">
+
+      <div class="comp-block">
+        <p class="comp-block-title">Travailler en mode projet</p>
+        <p>Analyse des objectifs du cahier des charges client (INFOWARE), planification selon un diagramme de PERT, et utilisation d'outils collaboratifs en binôme.</p>
+      </div>
+
+      <div class="comp-block">
+        <p class="comp-block-title">Concevoir et développer une solution</p>
+        <p>Programmation orientée objet en Java, exploitation de l'IDE NetBeans, et création de composants d'accès aux données (DAO) pour communiquer avec la base MariaDB via JDBC.</p>
+      </div>
+
+      <div class="comp-block">
+        <p class="comp-block-title">Réaliser les tests de validation</p>
+        <p>Mise en œuvre systématique de tests unitaires (<code>test.metier</code>, <code>test.dao</code>) pour vérifier l'intégrité des objets, et réalisation de tests fonctionnels de l'IHM.</p>
+      </div>
+
+      <div class="comp-block">
+        <p class="comp-block-title">Rédiger des documentations techniques</p>
+        <p>Génération de la JavaDoc à partir du code source commenté et livraison d'un exécutable documenté.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="section-label">// retrospective</p>
+    <h2 class="section-title">Bilan du projet</h2>
+    <div class="bilan-grid">
+
+      <div class="bilan-col done">
+        <h3>✓ Réalisé</h3>
+        <ul class="bilan-list">
+          <li>Initialisation d'une base de données MariaDB et liaison JDBC</li>
+          <li>Création complète des classes métier et DAO (Salarie, Categorie, Service)</li>
+          <li>Interfaces graphiques en Java Swing ergonomiques et fonctionnelles</li>
+          <li>Filtrage dynamique des salariés avec composants synchronisés (JTable/JComboBox)</li>
+          <li>Fonctionnalités d'ajout et de suppression avec intégrité référentielle</li>
+          <li>Livraison d'un exécutable autonome <code>.jar</code> documenté</li>
+        </ul>
+      </div>
+
+      <div class="bilan-col todo">
+        <h3>→ Restant à faire (Limites de temps)</h3>
+        <ul class="bilan-list">
+          <li><strong>Étape 9 :</strong> Modification d'un salarié. Nous n'avons pas eu le temps de réaliser cette étape spécifique de mise à jour (Update) dans les formulaires.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+<footer>
+  <p>&copy; 2026 Dupé Timéo. Tous droits réservés.</p>
+  <p>Portfolio BTS SIO · Projet <span>INFOWARE SIRH</span></p>
+</footer>
+</body>
+</html>

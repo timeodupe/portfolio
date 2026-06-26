@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Dupé Timéo | BTS SIO</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══ NAVIGATION ══ -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">DT<span>.</span></div>
+      <div class="nav-links">
+        <a href="#accueil">Accueil</a>
+        <a href="#a-propos">À propos</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ HERO / ACCUEIL ══ -->
+  <header class="hero" id="accueil">
+    <div class="container hero-content">
+      <div class="status-badge">
+        <span class="pulse-dot"></span>
+        Recherche de stage : 11 Janvier → 12 février 2027
+      </div>
+      
+      <h1>Dupé <span>Timéo</span></h1>
+      <p class="hero-sub">Étudiant en BTS SIO (option SLAM) à la Joliverie Saint-Sébastien-sur-Loire.</p>
+      
+      <div class="hero-actions">
+        <a href="documents/CV_Dupe_Timeo.pdf" download target="_blank" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Télécharger mon CV
+        </a>
+        <a href="#projets" class="btn btn-secondary">Voir mes projets</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ À PROPOS ══ -->
+  <section id="a-propos">
+    <div class="container">
+      <p class="section-label">// whoami</p>
+      <h2 class="section-title">À propos de moi</h2>
+      <div class="about-card">
+        <p>Étudiant en BTS SIO, je suis depuis toujours passionné par l’informatique, avec un attrait particulier pour l'écosystème Apple. J’aime me tenir à jour sur les nouvelles technologies, principalement celles orientées hardware.</p>
+        <p>Je suis d'un naturel curieux : j’aime comprendre le fonctionnement des systèmes qui m'entourent et apprendre continuellement de nouvelles choses pour monter en compétences.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PARCOURS SCOLAIRE ══ -->
+  <section id="parcours">
+    <div class="container">
+      <p class="section-label">// education</p>
+      <h2 class="section-title">Mon Parcours Scolaire</h2>
+      
+      <div class="timeline">
+        <!-- Item 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot" style="border-color: var(--accent);"></div>
+          <div class="timeline-date">en cours</div>
+          <div class="timeline-content">
+            <h3>BTS SIO option SLAM</h3>
+            <h4>Joliverie Saint-Sébastien-sur-Loire</h4>
+            <p>Service Informatique aux Organisations - Solutions Logicielles et Applications Métiers.</p>
+          </div>
+        </div>
+        
+        <!-- Item 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot" style="border-color: var(--accent2);"></div>
+          <div class="timeline-date">2021 – 2025</div>
+          <div class="timeline-content">
+            <h3>BAC Général</h3>
+            <h4>Lycée Saint Joseph Châteaubriant</h4>
+            <p>Spécialités NSI (Numérique et Sciences Informatiques) et Mathématiques. Mention Assez bien.</p>
+          </div>
+        </div>
+        
+        <!-- Item 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot" style="border-color: var(--accent3);"></div>
+          <div class="timeline-date">2017 – 2021</div>
+          <div class="timeline-content">
+            <h3>Brevet des collèges</h3>
+            <h4>Collège Saint Joseph Châteaubriant</h4>
+            <p>Obtenu avec la Mention Assez-bien.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PROJETS ══ -->
+  <section id="projets">
+    <div class="container">
+      <p class="section-label">// portfolio</p>
+      <h2 class="section-title">Mes projets</h2>
+      
+      <div class="projects-grid">
+        
+        <!-- Projet 1 -->
+        <div class="project-card">
+          <div class="card-image-wrapper">
+            <img src="img/projets/STAGE-IWAN-TICKETS/Capture d’écran 2026-06-22 à 10.38.28.png" alt="IWAN Ticketing" />
+          </div>
+          <div class="project-content">
+            <h3>IWAN Ticketing</h3>
+            <p>Développement de zéro d'un logiciel de ticketing pour répondre aux besoins de gestion d'incidents des clients de l'entreprise IWAN.</p>
+            <div class="project-footer">
+              <span class="tech-tag">Stage</span>
+              <a href="./projet/Stage-IWAN-TICKETS/iwan-ticket.html" class="project-link">Voir le projet →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="project-card">
+          <div class="card-image-wrapper">
+            <img src="img/projets/INFOWARE/main_infoware.png" alt="INFOWARE SIRH" />
+          </div>
+          <div class="project-content">
+            <h3>Projet INFOWARE SIRH</h3>
+            <p>Application de gestion des ressources humaines (CRUD complet) développée en Java (POO) dans le cadre du BTS SIO.</p>
+            <div class="project-footer">
+              <span class="tech-tag">Java / SQL</span>
+              <a href="./projet/INFOWARE/projet_infoware_SIRH.html" class="project-link">Voir le projet →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="project-card">
+          <div class="card-image-wrapper">
+            <img src="img/projets/Gestion d'utilisateurs python/user-bdd.png" alt="Gestion utilisateurs" />
+          </div>
+          <div class="project-content">
+            <h3>Gestion d'utilisateurs</h3>
+            <p>Automatisation de la création de comptes utilisateurs et génération de bases de données isolées depuis un Active Directory.</p>
+            <div class="project-footer">
+              <span class="tech-tag">Python / PowerShell</span>
+              <a href="./projet/gestion-user/index-user.html" class="project-link">Voir le projet →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 4 -->
+        <div class="project-card">
+          <div class="card-image-wrapper multi-img">
+            <img src="img/projets/img_pokevert/choix_pokemon.png" alt="Pokevert Choix" />
+            <img src="img/projets/img_pokevert/combat.png" alt="Pokevert Combat" />
+          </div>
+          <div class="project-content">
+            <h3>Pokevert</h3>
+            <p>Jeu vidéo inspiré de Pokémon développé avec Pygame. Utilisation d'une API externe pour récupérer les sprites et données des créatures.</p>
+            <div class="project-footer">
+              <span class="tech-tag">Python / Pygame</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 5 -->
+        <div class="project-card">
+          <div class="card-image-wrapper multi-img">
+            <img src="img/projets/img_vectura/Accueil.png" alt="Vectura Accueil" />
+            <img src="img/projets/img_vectura/login.png" alt="Vectura Login" />
+          </div>
+          <div class="project-content">
+            <h3>Vectura</h3>
+            <p>Création d'un site web dynamique avec back-end pour une entreprise de location de véhicules (Base de données et authentification).</p>
+            <div class="project-footer">
+              <span class="tech-tag">PHP / SQL</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══ -->
+  <section id="contact" style="border-bottom: none;">
+    <div class="container">
+      <p class="section-label">// ping</p>
+      <h2 class="section-title">Entrons en contact</h2>
+      
+      <div class="contact-wrapper">
+        <p class="contact-desc">
+          Actuellement à la recherche d’un stage pour la période du <strong>11 janvier au 12 février 2027</strong> dans le domaine du développement web, logiciel ou mobile. N'hésitez pas à me contacter !
+        </p>
+
+        <div class="email-box">
+          <span class="email-text">timeo.dupe@gmail.com</span>
+          
+          <div class="email-actions">
+            <button class="icon-btn copy-btn" title="Copier l'adresse">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+            <a href="mailto:timeo.dupe@gmail.com" class="icon-btn" title="Envoyer un e-mail">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <p>&copy; 2026 Dupé Timéo. Tous droits réservés.</p>
+    <p>Portfolio Étudiant · <span>BTS SIO SLAM</span></p>
+  </footer>
+
+  <!-- ══ SCRIPTS ══ -->
+  <script>
+    document.querySelector('.copy-btn').addEventListener('click', function() {
+      const emailText = document.querySelector('.email-text').textContent;
+      navigator.clipboard.writeText(emailText).then(function() {
+        // Petit feedback visuel rapide sur le bouton
+        const btn = document.querySelector('.copy-btn');
+        const originalHtml = btn.innerHTML;
+        btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#3FB950" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+        setTimeout(() => { btn.innerHTML = originalHtml; }, 2000);
+      });
+    });
+  </script>
+
+</body>
+</html>

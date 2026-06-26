@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet Gestion Utilisateurs — Portfolio BTS SIO</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style-projet-user.css" />
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <p class="hero-eyebrow">Projet Binôme BTS SIO — Janvier 2026</p>
+    <h1>Gestion Automatisée des<br><span>Utilisateurs</span></h1>
+    <p class="hero-sub">Automatisation de la création et de la gestion sécurisée de comptes utilisateurs et de leurs bases de données associées (Extraction AD, Python, SQL).</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Environnement</span>
+        <span class="meta-value">Domaine stesio.jol</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Date</span>
+        <span class="meta-value">Janvier 2026</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Organisation</span>
+        <span class="meta-value">Projet en Binôme</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Stack principale</span>
+        <span class="meta-value">PowerShell · Python · SQL</span>
+      </div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="../../index.html" class="btn btn-secondary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Retour au portfolio
+      </a>
+    </div>
+
+  </div>
+  <div class="hero-scroll">
+    <svg viewBox="0 0 24 24" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+    Voir le projet
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="section-label">// contexte</p>
+    <h2 class="section-title">Résumé du projet</h2>
+    <div class="resume-grid">
+      <div class="resume-card full">
+        <h3>Le projet</h3>
+        <p>Ce projet, réalisé en binôme dans le cadre du BTS SIO, vise à automatiser la création et la gestion sécurisée de comptes utilisateurs et de leurs bases de données associées. Il consiste à extraire des données utilisateurs depuis un Active Directory, à normaliser ces données, à générer des mots de passe robustes via Python, et enfin à produire des scripts SQL pour la création (et la suppression) massive de bases de données avec des privilèges cloisonnés.</p>
+      </div>
+      <div class="resume-card">
+        <h3>Les enjeux</h3>
+        <p>L'objectif principal était de garantir que chaque utilisateur dispose d'un espace de base de données personnel, entièrement cloisonné et sécurisé, tout en automatisant les tâches répétitives d'administration système pour éviter les erreurs humaines.</p>
+      </div>
+      <div class="resume-card">
+        <h3>L'environnement technique</h3>
+        <p>Le projet s'est déroulé dans un environnement virtualisé simulant un réseau d'entreprise complet (Domaine <code>stesio.jol</code>). L'infrastructure comprenait un serveur sous Rocky Linux 9.5 (MariaDB), un client Windows 10 Pro (VS Code / PowerShell), le tout sécurisé via une segmentation par VLAN et une authentification via Stormshield.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="section-label">// realisations</p>
+    <h2 class="section-title">Principales réalisations</h2>
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">🌐</div>
+        <h3>1. Préparation de l'infrastructure</h3>
+        <p>Configuration réseau des machines virtuelles (attribution d'IP statiques, plan de nommage) et jonction du poste Windows 10 au domaine Active Directory pour permettre l'administration centralisée du parc.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📥</div>
+        <h3>2. Extraction et traitement</h3>
+        <p>Développement du script PowerShell <code>extractUsersPerpignan.ps1</code> pour récupérer les utilisateurs de l'AD vers un CSV. Utilisation de Python (<code>unicodedata</code>) pour normaliser les données et créer des logins standardisés (ex: <code>pnom</code>) sans accents ni caractères spéciaux.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🔐</div>
+        <h3>3. Sécurité et Mots de passe</h3>
+        <p>Développement d'un générateur Python (<code>testPassword.py</code>) créant des mots de passe ultra-sécurisés de 12 caractères minimum (majuscules, minuscules, chiffres, caractères spéciaux), couplé à une vérification anti-doublon.</p>
+      </div>
+
+      <div class="feature-card" style="grid-column: 1 / -1;">
+        <div class="feature-icon">⚙️</div>
+        <h3>4. Automatisation SQL</h3>
+        <p>Génération dynamique de scripts SQL via Python pour assurer que chaque utilisateur ne peut accéder qu'à sa propre base de données. L'automatisation prend en charge la création de la base, de l'utilisateur et l'attribution ciblée des droits :</p>
+        
+        <div class="code-window">
+          <div class="code-header">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="code-title">script_generation.sql</span>
+          </div>
+          <pre><code>CREATE DATABASE IF NOT EXISTS st_utilisateur;
+CREATE USER IF NOT EXISTS 'utilisateur'@'localhost' IDENTIFIED BY 'password';
+GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT ON st_utilisateur.* TO 'cauvray'@'localhost';</code></pre>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="section-label">// stack</p>
+    <h2 class="section-title">Technologies & Outils</h2>
+    <div class="tech-groups">
+
+      <div class="tech-group">
+        <span class="tech-group-label">Scripting</span>
+        <div class="tech-chips">
+          <span class="tech-chip">PowerShell <span class="tc-role">Extraction AD</span></span>
+          <span class="tech-chip">Python <span class="tc-role">Traitement & Génération</span></span>
+          <span class="tech-chip">SQL <span class="tc-role">Provisionnement BDD</span></span>
+        </div>
+      </div>
+
+      <div class="tech-group">
+        <span class="tech-group-label">Infrastructure</span>
+        <div class="tech-chips">
+          <span class="tech-chip">Active Directory <span class="tc-role">Annuaire</span></span>
+          <span class="tech-chip">Rocky Linux 9.5 <span class="tc-role">Serveur</span></span>
+          <span class="tech-chip">Windows 10 Pro <span class="tc-role">Client Admin</span></span>
+        </div>
+      </div>
+
+      <div class="tech-group">
+        <span class="tech-group-label">Sécurité & SGBD</span>
+        <div class="tech-chips">
+          <span class="tech-chip">MariaDB <span class="tc-role">Moteur SQL</span></span>
+          <span class="tech-chip">Stormshield <span class="tc-role">Firewall / Auth</span></span>
+          <span class="tech-chip">VLAN <span class="tc-role">Segmentation réseau</span></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="section-label">// référentiel E5</p>
+    <h2 class="section-title">Compétences développées</h2>
+    <div class="comp-grid">
+
+      <div class="comp-block">
+        <p class="comp-block-title">D1.1 — Gérer le patrimoine informatique</p>
+        <p>Mise en place de l'environnement virtuel complet et intégration transparente des machines au domaine Active Directory.</p>
+      </div>
+
+      <div class="comp-block">
+        <p class="comp-block-title">D1.2 — Répondre aux incidents et demandes</p>
+        <p>Automatisation de la création de comptes utilisateurs pour gagner en efficacité et éviter toutes les erreurs liées aux saisies manuelles.</p>
+      </div>
+
+      <div class="comp-block">
+        <p class="comp-block-title">D1.3 — Développer la présence en ligne</p>
+        <p>Mise à disposition automatisée de services de base de données cloisonnés et sécurisés pour les utilisateurs finaux.</p>
+      </div>
+
+      <div class="comp-block">
+        <p class="comp-block-title">D4.1 — Conception et développement</p>
+        <p>Scripting avancé en combinant Python et SQL pour la conception d'outils d'automatisation des tâches d'administration système et réseau.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Dupé Timéo. Tous droits réservés.</p>
+  <p>Portfolio BTS SIO · Projet <span>Gestion Utilisateurs</span></p>
+</footer>
+
+</body>
+</html>

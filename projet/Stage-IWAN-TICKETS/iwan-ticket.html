@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="iwan-ticket.css" />
+  <title>Projet Ticketing IWAN — Portfolio BTS SIO</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="container">
+    <p class="hero-eyebrow">Stage BTS SIO — Mai / Juin 2026</p>
+    <h1>Application de <span>ticketing</span><br>pour IWAN</h1>
+    <p class="hero-sub">Conception et développement complet d'une plateforme web de gestion des incidents et demandes clients, de la base de données au déploiement en production.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Entreprise</span>
+        <span class="meta-value">IWAN — Châteaubriant</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Durée</span>
+        <span class="meta-value">18 mai → 19 juin 2026</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Rôle</span>
+        <span class="meta-value">Développeur fullstack seul</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Stack principale</span>
+        <span class="meta-value">PHP · MySQL · JavaScript</span>
+      </div>
+    </div>
+
+    <!-- BOUTON TÉLÉCHARGER RAPPORT DE STAGE -->
+    <div class="hero-actions">
+        <a href="../../index.html" class="btn btn-secondary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Retour au portfolio
+      </a>
+      <a href="/projet/Stage-IWAN-TICKETS/CR/DUPÉ_TIMÉO_Rapport_Stage.pdf" class="btn btn-primary" download>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Télécharger mon rapport
+      </a>
+    </div>
+
+  </div>
+  <div class="hero-scroll">
+    <svg viewBox="0 0 24 24" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+    Voir le projet
+  </div>
+</section>
+
+<!-- ══ RÉSUMÉ ══ -->
+<section>
+  <div class="container">
+    <p class="section-label">// contexte</p>
+    <h2 class="section-title">Résumé du projet</h2>
+    <div class="resume-grid">
+      <div class="resume-card full">
+        <h3>Pourquoi ce projet ?</h3>
+        <p>IWAN est une SARL spécialisée dans le développement de logiciels sur mesure (ERP, logiciel de caisse, réservation…). Leurs clients rencontraient des bugs et avaient des demandes d'évolution, mais sans outil centralisé pour les gérer. J'ai été missionné pour concevoir de zéro une application web de ticketing : chaque incident ou demande devient un ticket numéroté, priorisé et traçable, accessible directement depuis l'espace client existant.</p>
+      </div>
+      <div class="resume-card">
+        <h3>Ce que j'ai réalisé</h3>
+        <p>Conception complète de la base de données (dictionnaire de données → MLD sur Looping), développement du back-end en PHP natif avec architecture MVC, interfaces dynamiques avec requêtes asynchrones (AJAX / Fetch), intégration de l'API OpenAI, génération de PDF, envoi d'e-mails automatiques et déploiement sur serveur distant IONOS via FileZilla.</p>
+      </div>
+      <div class="resume-card">
+        <h3>Résultat</h3>
+        <p>Application entièrement fonctionnelle et mise en production à l'issue du stage. Deux interfaces distinctes : une pour les clients (création et suivi de tickets) et une pour l'équipe IWAN (gestion, réponses, suivis d'appels). La maquette Figma réalisée en amont par un autre stagiaire a servi de guide visuel tout au long du développement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FONCTIONNALITÉS ══ -->
+<section>
+  <div class="container">
+    <p class="section-label">// features</p>
+    <h2 class="section-title">Fonctionnalités clés</h2>
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">🎫</div>
+        <h3>Gestion des tickets</h3>
+        <p>Création, classification par niveau d'urgence, numérotation automatique et centralisation de toutes les demandes et incidents clients au même endroit.</p>
+        <span class="feature-tag">Cœur métier</span>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Interfaces dynamiques (AJAX)</h3>
+        <p>Recherche d'entreprises en temps réel avec un délai de 300 ms, réponse JSON sans rechargement de page. Les données déjà saisies sont préservées pendant la recherche.</p>
+        <span class="feature-tag">JavaScript / Fetch</span>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📎</div>
+        <h3>Pièces jointes intelligentes</h3>
+        <p>Nommage unique via <code>uniqid()</code>, icônes SVG auto-générées selon l'extension, ouverture dans un nouvel onglet pour les fichiers compatibles navigateur ou téléchargement forcé pour les autres.</p>
+        <span class="feature-tag">PHP · SVG</span>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📄</div>
+        <h3>Export PDF</h3>
+        <p>Génération d'un ticket complet au format A4 imprimable via la librairie PHP Dompdf, installée avec Composer. Vue HTML/CSS dédiée pour un rendu propre et professionnel.</p>
+        <span class="feature-tag">Dompdf · Composer</span>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <h3>Correction IA (OpenAI)</h3>
+        <p>Reformulation et correction orthographique des descriptions de tickets via l'API GPT. L'utilisateur prévisualise le texte modifié dans une modale avant de choisir de l'appliquer ou non.</p>
+        <span class="feature-tag">API OpenAI</span>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📧</div>
+        <h3>E-mails automatiques</h3>
+        <p>Notifications client et IWAN à chaque événement (nouveau ticket, réponse, suivi). Envoi via PHPMailer en SMTPS chiffré, templates HTML professionnels, gestion des erreurs en try/catch.</p>
+        <span class="feature-tag">PHPMailer · SMTP</span>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📋</div>
+        <h3>Suivis d'appels</h3>
+        <p>Section dédiée à la création de comptes-rendus d'appels liés aux clients, permettant à IWAN d'assurer une traçabilité complète de toutes les interactions, au-delà des seuls tickets.</p>
+        <span class="feature-tag">Traçabilité</span>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🚀</div>
+        <h3>Déploiement en production</h3>
+        <p>Transfert du code source via FileZilla (FTP), import de la base de données MySQL sur le serveur distant IONOS, passage d'un environnement local XAMPP à une application accessible en ligne.</p>
+        <span class="feature-tag">FTP · Hébergement</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ TECHNOLOGIES ══ -->
+<section>
+  <div class="container">
+    <p class="section-label">// stack</p>
+    <h2 class="section-title">Technologies utilisées</h2>
+    <div class="tech-groups">
+
+      <div class="tech-group">
+        <span class="tech-group-label">Back-end</span>
+        <div class="tech-chips">
+          <span class="tech-chip">PHP (natif) <span class="tc-role">Principal</span></span>
+          <span class="tech-chip">Architecture MVC <span class="tc-role">Structure</span></span>
+          <span class="tech-chip">MySQL / MariaDB <span class="tc-role">Base de données</span></span>
+          <span class="tech-chip">PHPMailer <span class="tc-role">Mailing</span></span>
+          <span class="tech-chip">Dompdf <span class="tc-role">Export PDF</span></span>
+          <span class="tech-chip">Composer <span class="tc-role">Dépendances</span></span>
+          <span class="tech-chip">API OpenAI <span class="tc-role">IA</span></span>
+        </div>
+      </div>
+
+      <div class="tech-group">
+        <span class="tech-group-label">Front-end</span>
+        <div class="tech-chips">
+          <span class="tech-chip">HTML / CSS <span class="tc-role">Vues</span></span>
+          <span class="tech-chip">JavaScript <span class="tc-role">Interactivité</span></span>
+          <span class="tech-chip">AJAX / Fetch API <span class="tc-role">Requêtes async</span></span>
+          <span class="tech-chip">JSON <span class="tc-role">Échanges de données</span></span>
+        </div>
+      </div>
+
+      <div class="tech-group">
+        <span class="tech-group-label">Outils & environnement</span>
+        <div class="tech-chips">
+          <span class="tech-chip">VS Code <span class="tc-role">Éditeur</span></span>
+          <span class="tech-chip">XAMPP <span class="tc-role">Serveur local</span></span>
+          <span class="tech-chip">phpMyAdmin <span class="tc-role">Admin BDD</span></span>
+          <span class="tech-chip">Looping <span class="tc-role">Modélisation MLD</span></span>
+          <span class="tech-chip">Figma <span class="tc-role">Maquettage</span></span>
+          <span class="tech-chip">FileZilla <span class="tc-role">Déploiement FTP</span></span>
+          <span class="tech-chip">IONOS <span class="tc-role">Hébergement</span></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ COMPÉTENCES BTS SIO ══ -->
+<section>
+  <div class="container">
+    <p class="section-label">// référentiel</p>
+    <h2 class="section-title">Compétences du BTS SIO</h2>
+    <div class="comp-grid">
+
+      <div class="comp-block">
+        <p class="comp-block-title">B1 — Support et mise à disposition</p>
+        <div class="comp-chips">
+          <span class="chip active">Déploiement en production</span>
+          <span class="chip active">Hébergement web (IONOS)</span>
+          <span class="chip active">Transfert FTP (FileZilla)</span>
+          <span class="chip active">Configuration environnement local (XAMPP)</span>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <p class="comp-block-title">B2 — Gestion du patrimoine informatique</p>
+        <div class="comp-chips">
+          <span class="chip active">Documentation du projet</span>
+          <span class="chip active">Architecture MVC</span>
+          <span class="chip active">Structuration arborescence</span>
+          <span class="chip">Versionnement</span>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <p class="comp-block-title">B3 — Sécurité</p>
+        <div class="comp-chips">
+          <span class="chip active">Protection injection SQL</span>
+          <span class="chip active">Protection XSS</span>
+          <span class="chip active">Stockage sécurisé (.env)</span>
+          <span class="chip active">Chiffrement SMTPS</span>
+          <span class="chip active">Clé API hors code source</span>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <p class="comp-block-title">B4 — Développement d'applications</p>
+        <div class="comp-chips">
+          <span class="chip active">Analyse des besoins</span>
+          <span class="chip active">Dictionnaire de données</span>
+          <span class="chip active">Conception MLD (Looping)</span>
+          <span class="chip active">Développement back-end PHP</span>
+          <span class="chip active">Requêtes SQL </span>
+          <span class="chip active">Interfaces dynamiques AJAX</span>
+          <span class="chip active">Intégration API REST (OpenAI)</span>
+          <span class="chip active">Maquettage (Figma)</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ BILAN ══ -->
+<section>
+  <div class="container">
+    <p class="section-label">// retrospective</p>
+    <h2 class="section-title">Bilan du projet</h2>
+    <div class="bilan-grid">
+
+      <div class="bilan-col done">
+        <h3>✓ Réalisé</h3>
+        <ul class="bilan-list">
+          <li>Application 100 % fonctionnelle livrée en production</li>
+          <li>Deux interfaces distinctes (client / IWAN) conformes au cahier des charges</li>
+          <li>Base de données conçue intégralement de zéro</li>
+          <li>Gestion des pièces jointes avec nommage unique et affichage adapté</li>
+          <li>Export PDF imprimable des tickets</li>
+          <li>Correction IA avec validation utilisateur avant application</li>
+          <li>Envoi d'e-mails transactionnels professionnels</li>
+          <li>Déploiement complet sur serveur distant</li>
+        </ul>
+      </div>
+
+      <div class="bilan-col todo">
+        <h3>→ Améliorations identifiées</h3>
+        <ul class="bilan-list">
+          <li>Responsive design mobile (colonnes à réduire sur les tableaux)</li>
+          <li>Envoi des e-mails en arrière-plan (async) pour ne pas bloquer l'UI</li>
+          <li>Migration vers un framework PHP (Symfony ou Laravel)</li>
+          <li>Interface de suivi chronologique style fil de discussion</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <p>&copy; 2026 Dupé Timéo. Tous droits réservés.</p>
+  <p>Portfolio BTS SIO · Projet <span>IWAN TICKETING</span></p>
+</footer>
+
+</body>
+</html>
