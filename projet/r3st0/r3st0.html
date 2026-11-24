@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>r3st0 — Plateforme de critiques de restaurants</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="r3st0.css" />
+</head>
+<body>
+  <section class="hero">
+    <div class="container">
+      <p class="hero-eyebrow">Projet de groupe BTS SIO SLAM — 2026 / 2027</p>
+      <div class="hero-layout"><div><h1>Plateforme de critiques<br><span>de restaurants</span></h1><p class="hero-sub">Conception d’un site communautaire de découverte et de critique de restaurants. Les visiteurs recherchent des adresses, consultent leurs fiches et partagent leurs avis.</p></div><img class="project-logo" src="../../img/projets/r3st0/logo.png" alt="Logo r3st0" /></div>
+      <div class="hero-meta"><div class="meta-item"><span class="meta-label">Contexte</span><span class="meta-value">Projet de premier semestre</span></div><div class="meta-item"><span class="meta-label">Organisation</span><span class="meta-value">Projet en équipe</span></div><div class="meta-item"><span class="meta-label">Architecture</span><span class="meta-value">PHP · MVC · DAO</span></div><div class="meta-item"><span class="meta-label">Données</span><span class="meta-value">MariaDB · PDO</span></div></div>
+      <div class="hero-actions"><a href="../../index.html" class="btn btn-secondary"><span aria-hidden="true">←</span> Retour au portfolio</a><a href="https://gitlab.com/groupe-7-tim-o-titouan/r3st0" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Voir le dépôt GitLab ↗</a></div>
+    </div><div class="hero-scroll"><svg viewBox="0 0 24 24" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>Voir le projet</div>
+  </section>
+  <section><div class="container"><p class="section-label">// contexte</p><h2 class="section-title">Résumé du projet</h2><div class="resume-grid">
+    <div class="resume-card full"><h3>Une plateforme de critiques de restaurants</h3><p>r3st0 s’inspire des sites de recommandation et de réservation : les utilisateurs peuvent parcourir les restaurants, consulter leurs informations et leurs photos, puis partager leur expérience. Le projet est réalisé dans le cadre de l’AP de BTS SIO, à partir d’un sujet pédagogique autour du développement MVC et de l’accès aux données en PHP.</p></div>
+    <div class="resume-card"><h3>Parcours utilisateur</h3><p>La page d’accueil met en avant des restaurants. Une recherche multicritère permet de retrouver des adresses, et chaque fiche rassemble les informations du restaurant, ses photos, ses types de cuisine, les notes et les commentaires.</p></div>
+    <div class="resume-card"><h3>Développement en équipe</h3><p>Le travail est organisé avec GitLab : dépôt partagé, branches par évolution, commits, issues et revues de merge requests. Les évolutions sont documentées par itérations et couvrent notamment la fiabilisation des recherches, la gestion des comptes et l’ajout des types de cuisine.</p></div>
+  </div></div></section>
+  <section><div class="container"><p class="section-label">// fonctionnalités</p><h2 class="section-title">Fonctionnalités principales</h2><div class="features-grid">
+    <article class="feature-card"><div class="feature-icon">🍽️</div><h3>Découvrir les restaurants</h3><p>Accueil avec une sélection de restaurants, liste complète et fiches détaillées avec adresse, horaires et galerie de photos.</p><span class="feature-tag">Consultation</span></article>
+    <article class="feature-card"><div class="feature-icon">🔎</div><h3>Rechercher une adresse</h3><p>Recherche par nom et adresse, avec filtres de localisation et types de cuisine. Les critères sélectionnés restent visibles après la recherche.</p><span class="feature-tag">Recherche multicritère</span></article>
+    <article class="feature-card"><div class="feature-icon">⭐</div><h3>Partager son avis</h3><p>Les membres peuvent noter et commenter les restaurants, et retrouver les avis liés à chaque établissement.</p><span class="feature-tag">Notes · commentaires</span></article>
+    <article class="feature-card"><div class="feature-icon">👤</div><h3>Gérer son compte</h3><p>Inscription, connexion et gestion du profil, avec des retours compréhensibles en cas d’erreur de saisie ou d’adresse déjà utilisée.</p><span class="feature-tag">Authentification</span></article>
+    <article class="feature-card"><div class="feature-icon">❤️</div><h3>Enregistrer ses favoris</h3><p>Les utilisateurs connectés peuvent aimer des restaurants et retrouver une sélection d’adresses appréciées.</p><span class="feature-tag">Favoris</span></article>
+    <article class="feature-card"><div class="feature-icon">🛡️</div><h3>Fiabiliser les traitements</h3><p>Requêtes préparées, validation des saisies côté serveur et mots de passe hachés pour mieux protéger les opérations et les comptes.</p><span class="feature-tag">PHP · PDO</span></article>
+  </div></div></section>
+  <section><div class="container"><p class="section-label">// architecture</p><h2 class="section-title">Technologies et organisation</h2><div class="tech-groups">
+    <div class="tech-group"><span class="tech-group-label">Application</span><div class="tech-chips"><span class="tech-chip">PHP <span class="tc-role">Contrôleurs</span></span><span class="tech-chip">HTML / CSS <span class="tc-role">Vues</span></span><span class="tech-chip">Sessions <span class="tc-role">Authentification</span></span></div></div>
+    <div class="tech-group"><span class="tech-group-label">Données</span><div class="tech-chips"><span class="tech-chip">MariaDB <span class="tc-role">SGBD</span></span><span class="tech-chip">PDO <span class="tc-role">Accès aux données</span></span><span class="tech-chip">DAO <span class="tc-role">Requêtes métier</span></span></div></div>
+    <div class="tech-group"><span class="tech-group-label">Méthode & outils</span><div class="tech-chips"><span class="tech-chip">Architecture MVC <span class="tc-role">Séparation des couches</span></span><span class="tech-chip">Git / GitLab <span class="tc-role">Branches et revues</span></span><span class="tech-chip">XAMPP <span class="tc-role">Environnement local</span></span></div></div>
+  </div><div class="architecture"><span>index.php</span><b>→</b><span>Contrôleurs</span><b>→</b><span>DAO / Modèle</span><b>→</b><span>MariaDB</span><i>Les contrôleurs transmettent les données aux vues PHP pour l’affichage.</i></div></div></section>
+  <footer><a href="../../index.html">← Retour au portfolio</a><p>Projet r3st0 · BTS SIO SLAM</p></footer>
+</body>
+</html>
